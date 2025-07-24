@@ -1,0 +1,31 @@
+# Dependency folders
+node_modules/
+.pnpm/
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.production
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor folders
+.vscode/
+.idea/
+
+# Git files
+*.swp
+*.swo
+git commit -m "Added .gitignore and removed node_modules/.env from Git tracking"
