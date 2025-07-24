@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    // If You DOnt Use Async-await THen You Have TO Use This Fromat 
+       /* function getData () {
+                fetch("api")
+                .then(function (response){
+                    response.json()
+                    .then(function(finaldata) {
+                        console.log(finaldata);
+                        
+                    })
+                })
+
+        }
+        */
+    // THat the Other Way To Do THAT 
+
+    async function getData() {
+        const response = await ('api')
+        const finaldata = await response.json()
+
+        console.log()
+    }
+    </script>
+
+
+    <button onclick="getData()">Gett all Information</button>
+</body>
+</html>
