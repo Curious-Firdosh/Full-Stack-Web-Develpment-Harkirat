@@ -1,0 +1,22 @@
+// When Not Using THe useCallback hOOK 
+🔍 What’s the issue?
+Every time you click "Increase Count", Parent re-renders.
+
+That makes handleClick a new function.
+
+Even though the Child is wrapped in React.memo, it still re-renders — because props changed (React sees the new function).
+
+🗣️ React: “This onClick is a different function now. Let’s re-render the child.”
+
+// After Adding The useCallback Hook 
+✅ What changed?
+handleClick is now memoized using useCallback.
+
+So, it doesn’t change on every render.
+
+MemoChild sees the same function, so it does not re-render every time.
+
+🧠 Simple explanation:
+Without useCallback: function changes → child re-renders.
+
+With useCallback: function stays the same → child doesn’t re-render unless needed.
