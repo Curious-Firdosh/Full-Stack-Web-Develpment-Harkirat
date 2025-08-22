@@ -1,5 +1,7 @@
+// Basic Of Recoil 
+
 import React from 'react'
-import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil'
+import { useRecoilState, useRecoilValue } from 'recoil'
 import { countAtom } from './Store/Atom/count'
 
 const App = () => {
@@ -11,10 +13,14 @@ const App = () => {
 }
 
 const Count = () => {
+
+  const count = useRecoilValue(countAtom)
     return (
       <div>
         <CountRender/>
         <Button/>
+        <h4 style={{color : "red"}}>{ (count % 2 == 0 )? "It is Even" : ""}</h4>
+
       </div>
     )
 }
@@ -23,7 +29,12 @@ const CountRender = () => {
   const count = useRecoilValue(countAtom)
 
   return(
-    <h1>{count}</h1>
+     <>
+        <h1>{count}</h1>
+       
+     
+     </>
+    
   )
 }
 
